@@ -1,12 +1,10 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {TextInput, TextInputProps} from 'react-native';
 
-const Input = () => {
-  return (
-    <View>
-      <Text>Input</Text>
-    </View>
-  );
+interface IInput extends TextInputProps {}
+
+const Input = ({...props}: IInput) => {
+  return <TextInput {...props} />;
 };
 
 export default Input;
