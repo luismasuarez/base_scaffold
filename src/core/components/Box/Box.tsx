@@ -8,7 +8,7 @@ import {
   ViewStyle,
 } from 'react-native';
 
-interface IBlock extends ViewProps {
+interface IBox extends ViewProps {
   flex?: ViewStyle['flex'];
   row?: boolean;
   justify?: ViewStyle['justifyContent'];
@@ -41,7 +41,7 @@ interface IBlock extends ViewProps {
   children?: React.ReactNode;
 }
 
-const Block = ({
+const Box = ({
   children,
   style,
   flex = 1,
@@ -69,7 +69,7 @@ const Block = ({
   scroll,
   shadow,
   ...props
-}: IBlock) => {
+}: IBox) => {
   const blockStyle = StyleSheet.flatten([
     flex !== undefined && {flex},
     row && {flexDirection: 'row'},
@@ -138,4 +138,4 @@ const Block = ({
   );
 };
 
-export default Block;
+export default Box;

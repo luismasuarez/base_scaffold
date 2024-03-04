@@ -1,9 +1,8 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import {
   StyleSheet,
   TouchableOpacity,
   TouchableOpacityProps,
-  Vibration,
   ViewStyle,
 } from 'react-native';
 
@@ -55,7 +54,6 @@ const Button = ({
   bottom,
   left,
   disabled,
-  vibrate,
   style,
   activeOpacity = 0.8,
   ...props
@@ -86,24 +84,11 @@ const Button = ({
     style,
   ]) as ViewStyle;
 
-  /* handle onPress event */
-  const handlePress = useCallback(
-    event => {
-      onPress?.(event);
-      /* vibrate support onPress */
-      if (vibrate !== undefined) {
-        Vibration.vibrate(vibrate);
-      }
-    },
-    [vibrate, onPress],
-  );
-
   return (
     <TouchableOpacity
       style={buttonStyle}
       disabled={disabled}
       activeOpacity={activeOpacity}
-      onPress={handlePress}
       {...props}>
       {children}
     </TouchableOpacity>

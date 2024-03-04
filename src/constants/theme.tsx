@@ -3,8 +3,8 @@ import {StyleSheet} from 'react-native';
 export interface ITheme {
   colors: {
     primary: string;
-    primary_accent: string;
     secondary: string;
+    primary_accent: string;
     secondary_accent: string;
     dark: string;
     ligth: string;
@@ -50,38 +50,31 @@ export interface ITheme {
 }
 
 export const COLORS = {
-  // base colors
-  primary: '#2f596a',
-  primary_accent: '#53a2c1',
-  secondary: '#e37316',
-  secondary_accent: '#fba123',
+  primary: '#53a2c1',
+  secondary: '#fba123',
+  primary_accent: '#2f596a',
+  secondary_accent: '#e37316',
   dark: '#1a1f23',
-  ligth: '#bbcad3',
+  light: '#bbcad3',
   accent: '#7d8b97',
-
-  // text color
   text: '#FFFFFF',
   invertedText: '#252F40',
 };
 
 export const SIZES = {
-  // global sizes
   base: 10,
   text: 14,
   radius: 5,
   padding: 20,
-  // font sizes
   h1: 44,
   h2: 40,
   h3: 32,
   h4: 24,
   h5: 18,
   p: 14,
-  // button sizes
   buttonHeight: 40,
   buttonRadius: 5,
   buttonBorder: StyleSheet.hairlineWidth,
-  // input sizes
   inputHeight: 40,
   inputRadius: 5,
   inputBorder: StyleSheet.hairlineWidth,
@@ -113,11 +106,11 @@ export const WEIGHTS = {};
 export const LINE_HEIGHTS = {};
 
 export const THEME = {
-  colors: COLORS,
+  colors: {...COLORS},
   sizes: {...SIZES},
   spacing: {...SPACING},
-  assets: ASSETS,
-  icons: ICONS,
+  assets: {...ASSETS},
+  icons: {...ICONS},
   fonts: {...FONTS},
 };
 

@@ -35,9 +35,6 @@ const App = (): React.JSX.Element => {
 
 export default App;
 
-// barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-// -> Esto define el color de los elementos de la barra de notificaciones
-
 /*
 Colores que vienen en la variable Colors
 

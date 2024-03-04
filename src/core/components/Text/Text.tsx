@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text as RNText, TextProps, TextStyle, StyleSheet} from 'react-native';
+import {StyleSheet, Text, TextProps, TextStyle} from 'react-native';
 
-interface IText extends TextProps {
+interface ITypography extends TextProps {
   children?: React.ReactNode;
   h1?: boolean;
   h2?: boolean;
@@ -32,7 +32,7 @@ interface IText extends TextProps {
   left?: TextStyle['left'];
 }
 
-const Text = ({
+const Typography = ({
   children,
   h1,
   h2,
@@ -63,7 +63,7 @@ const Text = ({
   left,
   style,
   ...props
-}: IText) => {
+}: ITypography) => {
   const textStyle = StyleSheet.flatten([
     h1 && {fontSize: 38, fontWeight: '800', fontFamily: 'System'},
     h2 && {fontSize: 32, fontWeight: '800', fontFamily: 'System'},
@@ -93,10 +93,10 @@ const Text = ({
   ]) as TextStyle;
 
   return (
-    <RNText style={textStyle} {...props}>
+    <Text style={textStyle} {...props}>
       {children}
-    </RNText>
+    </Text>
   );
 };
 
-export default Text;
+export default Typography;

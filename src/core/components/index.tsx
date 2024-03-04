@@ -1,4 +1,4 @@
-import Block from './Block/Block';
+import Block from './Box/Box.tsx';
 import Button from './Button/Button';
 import Input from './Input/Input.tsx';
 import Section from './Section/Section.tsx';
