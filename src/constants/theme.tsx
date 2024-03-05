@@ -96,9 +96,10 @@ export const ICONS = {};
 export const ASSETS = {};
 
 export const FONTS = {
-  regular: 'Rubik-Regular',
-  medium: 'Rubik-Bold',
-  bold: 'Rubik-SemiBold',
+  REGULAR: 'VictorMono-Regular',
+  MEDIUM: 'VictorMono-Medium',
+  SEMI_BOLD: 'VictorMono-SemiBold',
+  BOLD: 'VictorMono-Bold',
 };
 
 export const WEIGHTS = {};

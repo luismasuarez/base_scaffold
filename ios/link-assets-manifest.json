@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/VictorMono-Bold.ttf",
+      "sha1": "2d73064e51ed4bddd77c87f796f1b3536eabcb61"
+    },
+    {
+      "path": "assets/fonts/VictorMono-Medium.ttf",
+      "sha1": "76d70ea14ed62dcb7b1e946dd8e81ce2c1f956cf"
+    },
+    {
+      "path": "assets/fonts/VictorMono-Regular.ttf",
+      "sha1": "61441dc4bac73b1757ad9d9641e0316eb45ed48c"
+    },
+    {
+      "path": "assets/fonts/VictorMono-SemiBold.ttf",
+      "sha1": "ab41f814668a21fee3af9bc32407c6a00c24d8b7"
+    }
+  ]
+}
