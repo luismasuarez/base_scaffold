@@ -9,15 +9,17 @@ import React from 'react';
 import {StatusBar, useColorScheme} from 'react-native';
 
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import AppProviders from './src/AppProviders';
+import useTheme from './src/hooks/useTheme';
 import {NavigationLayout} from './src/screens/NavigationLayout';
 
 const App = (): React.JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
-
+  const {
+    theme: {colors},
+  } = useTheme();
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? colors.dark : colors.light,
   };
 
   return (
