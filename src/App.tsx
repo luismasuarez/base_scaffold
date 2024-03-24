@@ -4,14 +4,13 @@
  *
  * @format
  */
-
 import React from 'react';
 import {StatusBar, useColorScheme} from 'react-native';
 
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import AppProviders from './src/AppProviders';
-import useTheme from './src/hooks/useTheme';
-import {NavigationLayout} from './src/screens/NavigationLayout';
+import AppProviders from './AppProviders';
+import useTheme from './hooks/useTheme';
+import {NavigationLayout} from './routes/NavigationLayout';
 
 const App = (): React.JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -36,17 +35,3 @@ const App = (): React.JSX.Element => {
 };
 
 export default App;
-
-/*
-Colores que vienen en la variable Colors
-
-const Colors = {
-  "black": "#000",
-  "dark": "#444",
-  "darker": "#222",
-  "light": "#DAE1E7",
-  "lighter": "#F3F3F3",
-  "primary": "#1292B4",
-  "white": "#FFF"
-}
-*/
