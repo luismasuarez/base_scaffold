@@ -10,7 +10,7 @@ import {StatusBar, useColorScheme} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import AppProviders from './AppProviders';
 import useTheme from './hooks/useTheme';
-import {NavigationLayout} from './routes/NavigationLayout';
+import TabNavigatorLayout from './navigation/TabNavigatorLayout';
 
 const App = (): React.JSX.Element => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -28,7 +28,7 @@ const App = (): React.JSX.Element => {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <AppProviders>
-        <NavigationLayout />
+        <TabNavigatorLayout />
       </AppProviders>
     </SafeAreaProvider>
   );

@@ -44,7 +44,7 @@ interface IBox extends ViewProps {
 const Box = ({
   children,
   style,
-  flex = 1,
+  flex,
   row,
   justify,
   justifyContent,

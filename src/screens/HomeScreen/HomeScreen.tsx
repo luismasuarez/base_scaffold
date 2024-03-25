@@ -5,11 +5,7 @@ import Box from '../../core/components/Box/Box';
 import Typography from '../../core/components/Text/Text';
 import useTheme from '../../hooks/useTheme';
 
-type Props = {
-  navigation: any;
-};
-
-const HomeScreen = ({navigation}: Props) => {
+const HomeScreen = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const {
@@ -20,7 +16,8 @@ const HomeScreen = ({navigation}: Props) => {
     <Box
       color={isDarkMode ? colors.dark : colors.light}
       align="center"
-      justify="center">
+      justify="center"
+      flex={1}>
       <Typography size={52} color={colors.secondary} font={fonts.BOLD}>
         Hola Mundo
       </Typography>
@@ -30,8 +27,7 @@ const HomeScreen = ({navigation}: Props) => {
         color={colors.primary}
         align="center"
         justify="center"
-        radius={sizes.radius}
-        onPress={() => navigation.navigate('Drawer')}>
+        radius={sizes.radius}>
         <Typography font={fonts.SEMI_BOLD} weight="600" size={24}>
           Go
         </Typography>

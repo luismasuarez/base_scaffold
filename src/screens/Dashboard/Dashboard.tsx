@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from '../../core/components';
+import Box from '../../core/components/Box/Box';
 
 const Dashboard = () => {
   return (
-    <View>
-      <Text>Dashboard</Text>
-    </View>
+    <Box justifyContent="center" alignItems="center" flex={1}>
+      <Text size={34}>Dashboard</Text>
+    </Box>
   );
 };
 
