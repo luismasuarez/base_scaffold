@@ -50,7 +50,7 @@ const Typography = ({
   color,
   opacity,
   font,
-  fontFamily,
+  fontFamily = 'VictorMono-Regular',
   align,
   textAlign,
   transform,

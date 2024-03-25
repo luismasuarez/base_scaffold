@@ -1,11 +1,11 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import React from 'react';
-import Dashboard from '../Dashboard/Dashboard';
-import InvestScreen from '../InvestScreen/InvestScreen';
+import Dashboard from '../screens/Dashboard/Dashboard';
+import InvestScreen from '../screens/InvestScreen/InvestScreen';
 
 const Drawer = createDrawerNavigator();
 
-const DrawerScreen = () => {
+const DrawerNavigatorLayout = () => {
   return (
     <Drawer.Navigator initialRouteName="Dashboard">
       <Drawer.Screen name="Dashboard" component={Dashboard} />
@@ -14,4 +14,4 @@ const DrawerScreen = () => {
   );
 };
 
-export default DrawerScreen;
+export default DrawerNavigatorLayout;
