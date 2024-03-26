@@ -50,15 +50,16 @@ export interface ITheme {
 }
 
 export const COLORS = {
-  primary: '#53a2c1',
-  secondary: '#fba123',
-  primary_accent: '#2f596a',
-  secondary_accent: '#e37316',
-  dark: '#1a1f23',
-  light: '#bbcad3',
-  accent: '#7d8b97',
-  text: '#FFFFFF',
-  invertedText: '#252F40',
+  primary: 'hsla(197, 47%, 54%, 1.0)',
+  primary_accent: 'hsla(197, 39%, 30%, 1.0)',
+  secondary: 'hsla(35, 96%, 56%, 1.0)',
+  secondary_accent: 'hsla(27, 82%, 49%, 1.0)',
+  light: 'hsla(202, 21%, 78%, 1.0)',
+  dark: 'hsla(207, 15%, 12%, 1.0)',
+  accent: 'hsla(208, 11%, 54%, 1.0)',
+  text: 'hsla(0, 0%, 100%, 1.0)',
+  opacity: 'hsla(0, 0%, 100%, 0.15)',
+  invertedText: 'hsla(218, 27%, 20%, 1.0)',
 };
 
 export const SIZES = {

@@ -20,7 +20,12 @@ interface IBox extends ViewProps {
   wrap?: ViewStyle['flexWrap'];
   width?: ViewStyle['width'];
   height?: ViewStyle['height'];
+  padding?: ViewStyle['padding'];
   position?: ViewStyle['position'];
+  ml?: ViewStyle['marginLeft'];
+  mr?: ViewStyle['marginRight'];
+  mt?: ViewStyle['marginTop'];
+  mb?: ViewStyle['marginBottom'];
   top?: ViewStyle['top'];
   right?: ViewStyle['right'];
   bottom?: ViewStyle['bottom'];
@@ -38,6 +43,7 @@ interface IBox extends ViewProps {
     opacity?: ViewStyle['shadowOpacity'];
     radius?: ViewStyle['shadowRadius'];
   };
+  elevation?: ViewStyle['elevation'];
   children?: React.ReactNode;
 }
 
@@ -55,7 +61,12 @@ const Box = ({
   wrap,
   width,
   height,
+  padding,
   position,
+  ml,
+  mr,
+  mt,
+  mb,
   top,
   right,
   bottom,
@@ -68,6 +79,7 @@ const Box = ({
   safe,
   scroll,
   shadow,
+  elevation,
   ...props
 }: IBox) => {
   const blockStyle = StyleSheet.flatten([
@@ -82,7 +94,12 @@ const Box = ({
     wrap !== undefined && {flexWrap: wrap},
     width !== undefined && {width},
     height !== undefined && {height},
+    padding !== undefined && {padding},
     position !== undefined && {position},
+    ml !== undefined && {marginLeft: ml},
+    mr !== undefined && {marginRight: mr},
+    mt !== undefined && {marginRight: mt},
+    mb !== undefined && {marginRight: mb},
     top !== undefined && {top},
     right !== undefined && {right},
     bottom !== undefined && {bottom},
@@ -106,6 +123,7 @@ const Box = ({
       shadowRadius: 4,
       elevation: 2,
     },
+    elevation !== undefined && {elevation},
     radius !== undefined && {borderRadius: radius},
     overflow !== undefined && {overflow},
     shadow !== undefined && {...shadow},
